@@ -1,0 +1,23 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "The React course by Akshay Saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uday169/namaste-react-course.git"
+  },
+  "keywords": [],
+  "author": "Uday Pratap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uday169/namaste-react-course/issues"
+  },
+  "homepage": "https://github.com/uday169/namaste-react-course#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
