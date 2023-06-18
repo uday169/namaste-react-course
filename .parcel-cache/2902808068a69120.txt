@@ -4,7 +4,7 @@
 94C:\Users\udayp\Documents\learn\namaste-react\node_modules\@parcel\package-manager\src\index.js133315320437101846 0
 112C:\Users\udayp\Documents\learn\namaste-react\node_modules\lmdb\node_modules\node-addon-api\napi-inl.deprecated.h133267027637461248 0
 104C:\Users\udayp\Documents\learn\namaste-react\node_modules\csso\node_modules\css-tree\cjs\lexer\error.cjs133267027631240740 0
-57C:\Users\udayp\Documents\learn\namaste-react\package.json133315936184082633 0
+57C:\Users\udayp\Documents\learn\namaste-react\package.json133315945159269095 0
 64C:\Users\udayp\Documents\learn\namaste-react\node_modules\dotenv133267027599059811 1
 74C:\Users\udayp\Documents\learn\namaste-react\node_modules\is-glob\index.js133267027592265810 0
 62C:\Users\udayp\Documents\learn\namaste-react\package-lock.json133315917378480021 0
