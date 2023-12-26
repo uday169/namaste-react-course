@@ -37,10 +37,10 @@
 
 .res-card {
   width: 310px;
-  /* height: 400px; */
+  height: 490px;
   background-color: rgb(220, 218, 218);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px;
 }
 
@@ -67,7 +67,7 @@
 
 .shimmer-card {
   width: 310px;
-  height: 620px;
+  height: 450px;
   background-color: #dcdada;
   padding: 5px;
   border-radius: 5px;
