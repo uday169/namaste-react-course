@@ -17,8 +17,9 @@ const Body = () => {
     );
 
     const restaurants = await data.json();
+    console.log(restaurants);
     const json =
-      restaurants?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      restaurants?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
     setListOfRestaurants(json);
     setFilteredRestaurants(json);
@@ -52,7 +53,6 @@ const Body = () => {
             const filteredList = listOfRestaurants?.filter(
               (res) => res?.info?.avgRating > 4.5
             );
-            console.log(filteredList);
             setFilteredRestaurants(filteredList);
           }}
         >
