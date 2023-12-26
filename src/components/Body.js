@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -15,10 +17,11 @@ const Body = () => {
     );
 
     const restaurants = await data.json();
-    setListOfRestaurants(
+    const json =
       restaurants?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
+        ?.restaurants;
+    setListOfRestaurants(json);
+    setFilteredRestaurants(json);
   };
 
   return listOfRestaurants?.length === 0 ? (
@@ -26,14 +29,31 @@ const Body = () => {
   ) : (
     <div className="res-body">
       <div className="filter">
+        <input
+          type="text"
+          name="search-box"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <button
+          className="search-btn"
+          onClick={() => {
+            const filteredRest = listOfRestaurants.filter((res) =>
+              res?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setFilteredRestaurants(filteredRest);
+          }}
+        >
+          Search
+        </button>
         <button
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants?.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res?.info?.avgRating > 4.5
             );
             console.log(filteredList);
-            setListOfRestaurants(filteredList);
+            setFilteredRestaurants(filteredList);
           }}
         >
           Top Rated Restaurants
@@ -41,7 +61,7 @@ const Body = () => {
       </div>
 
       <div className="res-container">
-        {listOfRestaurants?.map((restaurant) => (
+        {filteredRestaurants?.map((restaurant) => (
           <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
         ))}
       </div>
