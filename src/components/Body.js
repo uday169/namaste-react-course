@@ -16,22 +16,20 @@ const Body = () => {
 
     const restaurants = await data.json();
     setListOfRestaurants(
-      restaurants?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      restaurants?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
 
-  if (listOfRestaurants.length === 0) {
-    return <Shimmer />;
-  }
-
-  return (
+  return listOfRestaurants?.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="res-body">
       <div className="filter">
         <button
           className="filter-btn"
           onClick={() => {
-            const filteredList = listOfRestaurants.filter(
+            const filteredList = listOfRestaurants?.filter(
               (res) => res.info.avgRating > 4.5
             );
             console.log(filteredList);
@@ -43,7 +41,7 @@ const Body = () => {
       </div>
 
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
+        {listOfRestaurants?.map((restaurant) => (
           <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
         ))}
       </div>

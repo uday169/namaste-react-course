@@ -73,3 +73,14 @@
   border-radius: 5px;
   margin: 10px;
 }
+
+.btn-login {
+  cursor: pointer;
+  padding: 0 10px;
+  color: black;
+  background-color: goldenrod;
+  border-radius: 10px;
+  width: auto;
+  font-weight: bold;
+  margin-left: 10px;
+}
