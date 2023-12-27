@@ -87,3 +87,35 @@
 .search-btn {
   cursor: pointer;
 }
+
+.res-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px;
+  border-bottom: dotted 1px;
+}
+.res-menu1 {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.res-menu2 {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.res-menu2 > h2 {
+  color: green;
+}
+
+.menu-section {
+  padding: 20px;
+  margin: 20px;
+}
+
+.item-list {
+  padding: 5px;
+  margin-top: 10px;
+}
