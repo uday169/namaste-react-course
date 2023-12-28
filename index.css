@@ -34,14 +34,19 @@
 .res-search {
   padding: 10px;
 }
-
 .res-card {
   width: 310px;
-  height: 490px;
+  height: 400px;
   background-color: rgb(220, 218, 218);
   padding: 5px;
   border-radius: 10px;
   margin: 10px;
+}
+
+.res-card-info {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: unset;
 }
 
 .res-card:hover {
@@ -67,7 +72,7 @@
 
 .shimmer-card {
   width: 310px;
-  height: 450px;
+  height: 400px;
   background-color: #dcdada;
   padding: 5px;
   border-radius: 5px;
@@ -94,7 +99,7 @@
   justify-content: space-around;
   padding: 20px;
   margin: 20px;
-  border-bottom: dotted 1px;
+  border-bottom: dotted 0.5px;
 }
 .res-menu1 {
   padding: 10px;
@@ -110,12 +115,58 @@
   color: green;
 }
 
+.menu-header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  /* /* border-bottom: dotted 0.5px; */
+}
 .menu-section {
   padding: 20px;
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .item-list {
   padding: 5px;
   margin-top: 10px;
+}
+
+.menu-items {
+  padding: 20px;
+}
+
+.menu-item > h3 {
+  text-decoration: underline;
+}
+
+.menu-item > ul {
+  list-style: none;
+}
+
+.menu-item > ul > p {
+  font-style: italic;
+  color: darkcyan;
+}
+
+.menu-item > li {
+  margin: 5px 0;
+}
+.inner-title {
+  font-weight: 600;
+}
+.inner-menu-item > ul {
+  list-style: none;
+  font-style: oblique;
+  margin: 10px;
+}
+
+.inner-menu-item > ul > p {
+  font-style: italic;
+  color: darkcyan;
+}
+
+.inner-menu-item > li {
+  margin: 5px;
 }

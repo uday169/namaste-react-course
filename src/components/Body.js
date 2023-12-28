@@ -17,7 +17,7 @@ const Body = () => {
     const data = await fetch(SWIGGY_URL);
 
     const restaurants = await data.json();
-    console.log(restaurants);
+    console.log("restaurants", restaurants);
     const json =
       restaurants?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
