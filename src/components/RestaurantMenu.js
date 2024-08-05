@@ -13,9 +13,9 @@ const RestaurantMenu = () => {
         const response = await fetch(MENU_URL + resId);
         const { data } = await response.json();
 
-        const restaurantInfo = data?.cards[0]?.card?.card?.info;
+        const restaurantInfo = data?.cards[2]?.card?.card?.info;
         const menuItems =
-          data?.cards[2]?.groupedCard?.cardGroupMap.REGULAR?.cards;
+          data?.cards[4]?.groupedCard?.cardGroupMap.REGULAR?.cards;
         console.log("restaurantData", data);
         setResInfo(restaurantInfo);
         setMenuData(menuItems);
